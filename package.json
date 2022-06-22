@@ -3,5 +3,23 @@
     "ejs": "^3.1.7",
     "express": "^4.18.0",
     "static": "^2.0.0"
-  }
+  },
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "server",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qorrudals117/node.git"
+  },
+  "author": "MIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qorrudals117/node/issues"
+  },
+  "homepage": "https://github.com/qorrudals117/node#readme"
 }

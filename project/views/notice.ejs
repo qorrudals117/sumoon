@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/리셋.css">
+    <link rel="stylesheet" href="css/notice.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <h2>공지사항 작성하기</h2>
+
+            <form method="POST" action="/store">   
+                <table>
+                    <tr>
+                        <td>
+                            <textarea name="title"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>이름 :</label></td>
+                        <td><input name="user" type="text" id="noti_name"></td>
+                    </tr>
+                    <tr>
+                        <td><label>비밀번호 :</label></td>
+                        <td><input name="pw" type="password" id="noti_pw"></td>
+                    </tr>
+                    <tr>
+                        <td><label>날짜</label></td>
+                        <td>
+                            <input name="date" type="text" placeholder="20220419" id="noti_date">*8자리숫자로 입력
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>내용 작성 :</td>
+                        <td><textarea name="content"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>첨부 :</td>
+                        <td><input type="button" value="첨부" id="noti_img"> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="저장">
+                            <input type="button" value="돌아가기" onclick="javascript:location.href='/'">
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

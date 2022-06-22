@@ -1,0 +1,119 @@
+header{
+    width: 100%;
+    padding-top: 85px;
+}
+header>h1{ 
+    text-align: center;
+}
+main{
+    width: 100%;
+    padding: 100px 0;
+}
+article{
+    width: 700px;
+    margin: auto;
+    text-align: center;
+}
+article>div{
+    width: 420px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+article>div>div{
+    height: 40px;
+}
+article>div>div>a{
+    width: 33.3333%;
+    color: #000;
+}
+article>input{
+    display: block;
+    width: 420px;
+    height: 46px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+article>a{
+    display: block;
+    width: 420px;
+    height: 54px;
+    background-color: #440099;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    line-height: 54px;
+}
+article>p{
+    margin: 10px auto;
+    width: 420px;
+    display: flex;
+    justify-content: flex-end;
+}
+article>p>a{
+    display: block;
+    margin-right: 5px;
+    color: #666666;
+}
+footer{
+    margin-top: 100px;
+    width: 100%;
+}
+.f_bottom{
+    width: 100%;
+    padding-top: 15px;
+}
+.f_text>p{
+    width: 1360px;
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
+    color: #444444;
+}
+.f_text>p>span{
+    color: #cccccc;
+}
+
+
+
+
+@media only screen and (max-width: 1200px){
+    .f_top{
+        width: 100%;
+        display:none;
+    }
+    .f_text>p{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+    article{
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    article>div{
+        width: 100%;
+    }
+    article>p{
+        margin: 10px auto;
+        width: 100%;
+    }
+    article>input{
+        width: 100%;
+    }
+    article>a{
+        width: 100%;
+    }
+}

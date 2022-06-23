@@ -1,9 +1,9 @@
 const mysql = require('mysql')
 
 const connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : '1234',
+    host     : 'us-cdbr-east-05.cleardb.net',
+    user     : 'b14570cd74f405',
+    password : '97b325f3',
     port: '3306',
     database : 'memos',
     dateStrings:'date'

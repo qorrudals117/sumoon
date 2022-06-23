@@ -1,5 +1,5 @@
-var app = require('../app10')
-var port = 3000
+var app = require('../app')
+var port =procss.env.PORT || 3000
 
 
 app.listen(port, () =>{

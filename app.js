@@ -1,16 +1,31 @@
-const http = require('http');
+var express = require('express');
+var expressLayouts = require('express-ejs-layouts');
+const app = express();
+var logger = require('morgan');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var routers = require('./routes/route');
 
-const hostname = '127.0.0.1';
-const port = 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.write('node1');
-  res.write('node2');
-  res.end('node3');
-});
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.set('views', path.join(__dirname, 'views'));
+app.set('layout', 'layout');
+app.set('layout extractScripts', true)
+
+// app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'ejs');
+
+
+
+//css와 img의 파일 사용을 위한 경로 설정
+app.use(express.static(__dirname + '/public'));
+app.use(expressLayouts);
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(logger('dev'));
+app.use('/', routers);
+const homes = require('./routes/route.js');
+app.use('/', homes); //ues = 미들웨어 등록
+
+module.exports = app;

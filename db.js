@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
     user     : 'b14570cd74f405',
     password : '97b325f3',
     port: '3306',
-    database : 'memos',
+    database : 'heroku_321c6ccf89b4284',
     dateStrings:'date'
 })
 //리스트 전체를 불러오는 함수

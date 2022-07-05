@@ -18,7 +18,7 @@
     position: relative;
     top: 0;
 }
-h1{
+.main_img>h1{
     position: absolute;
     top: 35%;
     left: 50px;
@@ -72,7 +72,7 @@ h1>p{
 main{
     width: 100%;
 }
-section{
+.sec_m{
     width: 1460px;
     padding: 0 0 150px;
     margin: auto;

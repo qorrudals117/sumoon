@@ -57,15 +57,6 @@ main{
     width: 1460px;
     margin: auto;
 }
-.notice_img{
-    background-image: url(../img/990306_268359\ 123123.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-    position: relative;
-}
 .notice_img>h2{
     font-size: 36px;
     font-weight: bold;

@@ -47,7 +47,7 @@ main{
     margin: auto;
 }
 .notice_img{
-    background-image: url(../img/990306_268359\ 123123.jpg);
+    background-image: url(/img/990306_268359_123123.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,7 +101,7 @@ main{
     border: none;
     border-radius: 50%;
     background-color: #f230f2;
-    background-image: url(../img/1093183.png);
+    background-image: url(/img/1093183.png);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -109,24 +109,25 @@ main{
 .notice{
     width: 1460px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-
 }
-.notice>dl{
+.notice>a{
     width: calc(33.33% - 10px);
     height: 482px;
     border: 1px solid #d7d7d7;
-    margin-bottom: 40px;
+    margin: 0 13px 40px 0;
     padding: 30px;
     box-sizing: border-box;
     position: relative;
 }
-.notice>dl:hover{
-    border: 5px solid #f230f2;
+.notice>a:nth-child(3n){
+    margin-right: 0;
+}
+.notice>a:hover{
+    border: 3px solid #f230f2;
     box-sizing: border-box;
 }
-.notice>dl dt{
+.notice>a>dl dt{
     font-size: 24px;
     font-weight: 600;
     color: #000;
@@ -134,7 +135,7 @@ main{
     margin-bottom: 35px;
 
 }
-.notice>dl dd{
+.notice>a>dl dd{
     font-size: 16px;
     font-weight: 400;
     color: #000;
@@ -144,7 +145,7 @@ main{
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
-.notice>dl p{
+.notice>a>dl p{
     font-size: 13px;
     color: #ababab;
     position: absolute;
@@ -152,7 +153,7 @@ main{
     left: 30px;
     font-weight: 400;
 }
-.notice>dl span{
+.notice>a>dl span{
     font-size: 50px;
     color: #ababab;
     position: absolute;

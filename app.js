@@ -5,8 +5,11 @@ var logger = require('morgan');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var routers = require('./routes/route');
+const http = require('https')
 
-
+setInterval(function(){
+    http.get('https://qorrudals-seomunmarket.herokuapp.com/')
+},60000)
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('layout', 'layout');

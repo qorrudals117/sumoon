@@ -43,6 +43,17 @@ function deletenotiById(id,callback){
         callback()
     })
 }
+
+
+function page (id, callback){
+    //조회수 추가(근데 왜 새로고침 아니면 확인 불가인지?)
+        connection.query(`SELECT * FROM seomun WHERE id=?`,[id],(err, result) => {
+            if(err) {
+                throw err;}
+            callback(result);
+        });
+ }
+
 module.exports = {
-    getAllnoti,insertnoti,getnotiById,deletenotiById,updatenotiById
+    getAllnoti,insertnoti,getnotiById,deletenotiById,updatenotiById,page
 }

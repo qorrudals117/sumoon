@@ -18,6 +18,14 @@ router.get('/noti',function(req,res,next) {
     // res.send('test')
 })
 
+router.get('/page/:id', (req, res) => {
+    //var no = req.url;
+    var id = req.params.id;
+    db.page(id, (result) => {
+      res.render('notice_list',{result});
+    });
+  });
+
 router.get('/notice',(req,res)=>{
     res.render('notice')
 })
@@ -38,21 +46,22 @@ router.post('/store',[check('title').isByteLength({min:1 , max:300})],
         }
     });
 
-router.get('/updateMemo',(req,res)=>{
-    let id= req.query.id
+router.get('/updateMemo/:id',(req,res)=>{
+    var id = req.params.id;
+    console.log(id);
     db.getnotiById(id,(row)=>{
         if(typeof id ==='undefined' || row.length<=0){
             res.status(404).json({error:'undefinde notice'})
         }else{
-            res.render('updateMemo',{row:row[0]})
+            res.render('updateMemo',{row})
         }
     })
 })
-router.post('/updateMemo',[check('title').isLength({min:1,max:300})],
+router.post('/updateMemo/:id',[check('title').isLength({min:1,max:300})],
     (req,res) =>{
         let errs = validationResult(req)
         let param = JSON.parse(JSON.stringify(req.body));
-        let id = param['id']
+        var id = req.params.id;
         let title = param['title']
         let content = param['content']
         if (errs['errors'].length>0){
@@ -69,8 +78,9 @@ router.post('/updateMemo',[check('title').isLength({min:1,max:300})],
 
 
 
-router.get('/deletenoti',(req,res)=>{
-    let id = req.query.id
+router.get('/deletenoti/:id',(req,res)=>{
+    var id = req.params.id;
+    console.log(id);
     db.deletenotiById(id,()=>{
         res.redirect('/noti')
     })
@@ -101,6 +111,8 @@ router.get('/main',(req, res) =>{
 router.get('/noti1',(req, res) =>{
     res.render("notice_list")
 })
+
+
 
 module.exports = router; 
 

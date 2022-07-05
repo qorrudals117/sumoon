@@ -1,4 +1,4 @@
-h1{
+.notice_txt>h1{
     width: 1360px;
     margin: auto;
     font-size: 50px;
@@ -8,7 +8,7 @@ h1{
     color: #000;
 }
 
-h1>em{
+.notice_txt>h1>em{
     display: block;
     font-size: 16px;
     color: #ababab;

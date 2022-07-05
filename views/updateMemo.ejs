@@ -1,20 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
     <h1>공지 수정</h1>
 
-    <form method="POST" action="/updateMemo">
+    <form method="POST" action="/updateMemo/<%=row[0].id%>">
+        <table>
+            <tr>
+                <td><label>제목 :</label></td>
+                <td>
+                    <textarea name="title"><%=row[0].title%></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label>이름 :</label></td>
+                <td><input name="user" type="text" id="noti_name"></td>
+            </tr>
+            <tr>
+                <td><label>비밀번호 :</label></td>
+                <td><input name="pw" type="password" id="noti_pw"></td>
+            </tr>
+            <tr>
+                <td><label>날짜</label></td>
+                <td>
+                    <input name="date" type="text" placeholder="20220419" id="noti_date">*8자리숫자로 입력
+                </td>
+            </tr>
+            <tr>
+                <td>수정 내용 :</td>
+                <td><textarea name="content"><%=row[0].content%></textarea></td>
+            </tr>
+            <tr>
+                <td>첨부 :</td>
+                <td><input type="button" value="첨부" id="noti_img"> </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="저장">
+                    <input type="button" value="돌아가기" onclick="javascript:location.href='/'">
+                </td>
+            </tr>
+
+        </table>
         <input type="hidden" name="id" value="<%=row.id%>">
-        <textarea name="title"><%=row.title%></textarea>
-        <textarea name="content"><%=row.content%></textarea>
         <input type="submit" value="수정">
         <input type="button" value="돌아가기" onclick="javascript:location.href='/noti'">
     </form>
-</body>
-</html>

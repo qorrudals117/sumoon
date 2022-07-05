@@ -53,6 +53,9 @@ header li>a{
     color: white;
     padding: 0 10px;
 }
+#logout{
+    display: none;
+}
 main{
     width: 1460px;
     margin: auto;
